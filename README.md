@@ -16,4 +16,23 @@ Summary results for each common word as a starting guess
 * time: interval diagnostic, time in seconds to find the decision tree
 
 ### results directory
-ZIP files of decision tree text files. 
+ZIP files of decision tree text files. Each text file has the decision tree for a single word. Each has 2315 lines, one line per Wordle solution word.
+The format was meant to be human-readable but is regular enough for machine processing as spaces-delimited fields. (Parsing as fixed-width may work, depending on how you parser counts the unicode characters.)
+Each line is a sequence of triplets consisting of:
+* guess, the five letter word
+* response, the Wordle formatted response
+* count, the number of words satisfying that response
+
+However, for the last triplet, only the first field is present since the response and count are always 🟩🟩🟩🟩🟩 and 1. In the sample below, TIGER is the initial guess. For the response of no hits there are 321 valid solutions and CLASP is the best next guess. For a response of just the last letter yellow, there are 9 valid solutions. From there DUMPY is the best guess as it uniquely identifies the solution, which might be DUMPY.
+
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜⬜⬜🟨🟩   1  phony\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜⬜⬜🟩🟩   1  poppy\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜⬜🟩🟩🟨   1  nymph\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜🟩⬜🟨🟩   1  puffy\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜🟩⬜🟩🟩   1  puppy\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜🟩🟩🟩⬜   1  humph\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜🟩🟩🟩🟩   1  jumpy\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy 🟨🟨⬜🟨⬜   1  pound\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy\
+tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟩   1  whoop\
+

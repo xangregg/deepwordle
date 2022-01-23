@@ -23,8 +23,11 @@ Summary results for each common word as a starting guess
 * time: internal diagnostic, time in seconds to find the decision tree
 
 ### results directory
-ZIP files of decision tree text files. Each text file has the decision tree for a single word. Each has 2315 lines, one line per Wordle solution word.
-The format was meant to be human-readable but is regular enough for machine processing as spaces-delimited fields. (Parsing as fixed-width may work, depending on how you parser counts the unicode characters.)
+ZIP files of a summary of "two-deep" choices and individual decision tree text files.
+Each "tree abcde.txt" file has the decision tree for a single word (abcde).
+Each has 2315 lines, one line per Wordle solution word.
+The format was meant to be human-readable but is regular enough for machine processing as spaces-delimited fields.
+(Parsing as fixed-width may work, depending on how your parser counts the Unicode characters.)
 Each line is a sequence of triplets consisting of:
 * guess, the five letter word
 * response, the Wordle formatted response

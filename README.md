@@ -10,13 +10,17 @@ found to need six guesses: MUMMY, SLUSH and YUMMY.
 ### common.txt
 A list of my collated "common" five letter English words. Combines the Wordle solutions with other lists and adds plurals and past tense words.
 
+### solveInFive.cpp
+C++ code for generating decision trees and summary info. Assumes a "results" directory exists in the default directory.
+Takes about 10 hours to process all 3622 common words on my 10-core machine, but you can choose a subset of starting words.
+
 ### summary ev.csv
 Summary results for each common word as a starting guess
 * guess: the word
 * ev: the average depth of solutions in the guess's optimal decision tree (ev = expected value)
 * max guesses: maximum depth of the guess's decision tree
-* pass: interval diagnostic, how many passes were needed to find a depth-five tree (each pass words harder)
-* time: interval diagnostic, time in seconds to find the decision tree
+* pass: internal diagnostic, how many passes were needed to find a depth-five tree (each pass works harder)
+* time: internal diagnostic, time in seconds to find the decision tree
 
 ### results directory
 ZIP files of decision tree text files. Each text file has the decision tree for a single word. Each has 2315 lines, one line per Wordle solution word.

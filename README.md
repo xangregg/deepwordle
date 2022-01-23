@@ -1,6 +1,9 @@
 # deepwordle
 
-Results from a searching for optimal decision trees for given starting words. "Optimal" meaning having the best worst case performance, which for almost alll words is five guesses. Only three words have been found to need six guesses: MUMMY, SLUSH and YUMMY.
+A companion blog post is on [rawdatastudies.com](https://rawdatastudies.com/2022/01/22/deep-wordle/).
+Results from a searching for optimal decision trees for given starting words. "Optimal" meaning having
+the best worst case performance, which for almost alll words is five guesses. Only three words have been
+found to need six guesses: MUMMY, SLUSH and YUMMY.
 
 "Deep" is in constrast to most optimization approaches on Wordle data which use greedy approaches, which are "shallow" with respect to the decision tree.
 
@@ -23,7 +26,7 @@ Each line is a sequence of triplets consisting of:
 * response, the Wordle formatted response
 * count, the number of words satisfying that response
 
-However, for the last triplet, only the first field is present since the response and count are always 🟩🟩🟩🟩🟩 and 1. In the sample below, TIGER is the initial guess. For the response of no hits there are 321 valid solutions and CLASP is the best next guess. For a response of just the last letter yellow, there are 9 valid solutions. From there DUMPY is the best guess as it uniquely identifies the solution, which might be DUMPY.
+However, for the last triplet, only the first field is present since its response and count are necessarily 🟩🟩🟩🟩🟩 and 1. In the sample below, TIGER is the initial guess. For the response of no hits there are 321 valid solutions and CLASP is the best next guess. For a response of just the last letter yellow, there are 9 valid solutions. From there DUMPY is the best guess as it uniquely identifies the solution, which might be DUMPY itself.
 
 tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜⬜⬜🟨🟩   1  phony\
 tiger ⬜⬜⬜⬜⬜ 321  clasp ⬜⬜⬜⬜🟨   9  dumpy ⬜⬜⬜🟩🟩   1  poppy\

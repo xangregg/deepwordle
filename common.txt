@@ -804,6 +804,8 @@ decry
 deeds
 defer
 deign
+deism
+deist
 deity
 deked
 delay
@@ -1295,7 +1297,6 @@ gamut
 gangs
 gaped
 gaper
-garth
 gases
 gasps
 gassy
@@ -1441,7 +1442,6 @@ guppy
 gusto
 gusts
 gusty
-gyoza
 gypsy
 habit
 hacks
@@ -1676,6 +1676,7 @@ kayak
 kazoo
 kebab
 keeps
+kefir
 keyed
 khaki
 kicks
@@ -2159,6 +2160,8 @@ opine
 opium
 opted
 optic
+orals
+orate
 orbed
 orbit
 order
@@ -2609,7 +2612,6 @@ rupee
 rural
 rusts
 rusty
-sabed
 saber
 sacks
 sadly
